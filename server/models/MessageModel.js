@@ -1,10 +1,19 @@
 const mongoose = require("mongoose");
 
 const messageSchema = new mongoose.Schema({
- body: {
-   type: String
- }
+  name: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  }
 });
 
-const MessageModel = mongoose.model("Comment", messageSchema);
+const MessageModel = mongoose.model("Message", messageSchema);
 module.exports = MessageModel;
